@@ -1,12 +1,12 @@
 import MainLayout from "../layouts/mainLayout";
+import SplitLayout from "../layouts/splitLayout";
 
 
 
-
-export default function Home() {
+export default function Education() {
  const content=(<div> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores sapiente, aperiam repudiandae assumenda alias, recusandae temporibus molestiae exercitationem aliquid, voluptatum voluptatibus soluta. Rerum consequuntur corporis error accusantium iste a ipsa!</div>);
     
   return (
-    <MainLayout title="My skills" divContent={content} />
+    <MainLayout title="Education" divContent={content} />
   );
 }
