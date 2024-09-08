@@ -26,10 +26,18 @@ body {
   }
 
   .flex-ratio {
-    @apply flex;
+    display: flex;
     flex-grow: 1.618003;
     flex-shrink: 1.618003;
     flex-basis: 0;
 
+  }
+}
+
+
+@layer components {
+
+  .title {
+    @apply text-[8vw] font-normal text-left hover:italic transform hover:translate-x-2 transition-transform duration-500
   }
 }

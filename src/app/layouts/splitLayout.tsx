@@ -4,19 +4,25 @@ import React, { ReactNode } from 'react';
 interface SplitLayoutProps {
     div1Content: ReactNode;
     div2Content: ReactNode;
+    divTitle?:ReactNode;
 }
 
-const SplitLayout: React.FC<SplitLayoutProps> = ({ div1Content, div2Content }) => {
+const SplitLayout: React.FC<SplitLayoutProps> = ({ div1Content, div2Content,divTitle }) => {
     return (
 
-        <div className="flex w-screen h-screen bg-primary text-secundary">
-            <aside className="flex grow pb-28 pr-20">
-                {div1Content}
-            </aside >
-            <div className="flex-ratio flex grow    ">
-                {div2Content}
+        <div className="flex bg-primary   text-secundary">
+            <div className="flex grow-0  ml-10  mr-32   flex-col bg-primary ">
+                <div className="flex-ratio grow items-end">{divTitle}</div>
+                <div className=" grow mt-10 mr-20">       {div1Content}
+                </div>
             </div>
+
+            <div className="flex-ratio flex grow   bg-primary  ">
+                <div className=" grow"> {div2Content}</div>
+            </div>
+
         </div>
+
 
     );
 };
