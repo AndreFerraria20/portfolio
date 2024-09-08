@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #252422;
+  --secundary: #FBFEF9;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,5 +23,13 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .flex-ratio {
+    @apply flex;
+    flex-grow: 1.618003;
+    flex-shrink: 1.618003;
+    flex-basis: 0;
+
   }
 }
