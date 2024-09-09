@@ -1,17 +1,17 @@
 import MainLayout from "../layouts/mainLayout";
 import SplitLayout from "../layouts/splitLayout";
-import Timeline, { TimelineItem } from '../ui/timeline'
+import Timeline from '../ui/timeline'
 
 
 
 export default function Education() {
-  const items: TimelineItem[] = [
-    { date: 2002, title: 'Item 1', description: "ipsis lorumipsis lorumipsis lorumipsis lorumipsis " },
-    { date: 2002, title: 'Item 2', description: "ipsis lorumipsis lorumipsis lorumipsis lorumipsis lorum" },
-    { date: 2002, title: 'Item 3', description: "ipsis lorumipsis lorumipsis lorumipsis lorum" },
-    { date: 2002, title: 'Item 4', description: "ipsis lorumipsis lorumipsis lorumipsis lorum" },
-    { date: 2002, title: 'Item 4', description: "ipsis lorumipsis lorumipsis lorumipsis lorum" },
-    { date: 2002, title: 'Item 4', description: "ipsis lorumipsis lorumipsis lorumipsis lorum" },
+  const items = [
+    { date: "2002", title: 'Item 1', description: "ipsis lorumipsis lorumipsis lorumipsis lorumipsis " },
+    { date: "2002", title: 'Item 2', description: "ipsis lorumipsis lorumipsis lorumipsis lorumipsis lorum" },
+    { date: "2002", title: 'Item 3', description: "ipsis lorumipsis lorumipsis lorumipsis lorum" },
+    { date: "2002", title: 'Item 4', description: "ipsis lorumipsis lorumipsis lorumipsis lorum" },
+    { date: "2002", title: 'Item 4', description: "ipsis lorumipsis lorumipsis lorumipsis lorum" },
+    { date: "2002", title: 'Item 4', description: "ipsis lorumipsis lorumipsis lorumipsis lorum" },
 
   ];
   const content = (<><div>

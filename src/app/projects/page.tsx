@@ -1,11 +1,16 @@
 import MainLayout from "../layouts/mainLayout";
 import SplitLayout from "../layouts/splitLayout";
+import RotatingMenu from "../ui/rotatingMenu";
 
 
 
 export default function Projects() {
- const content=(<div> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores sapiente, aperiam repudiandae assumenda alias, recusandae temporibus molestiae exercitationem aliquid, voluptatum voluptatibus soluta. Rerum consequuntur corporis error accusantium iste a ipsa!</div>);
-    
+  const content = (
+    <div>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores sapiente, aperiam repudiandae assumenda alias, recusandae temporibus molestiae exercitationem aliquid, voluptatum voluptatibus soluta. Rerum consequuntur corporis error accusantium iste a ipsa!
+      <RotatingMenu/>
+    </div>);
+
   return (
     <MainLayout darkBg={true} title="Projects" divContent={content} />
   );
