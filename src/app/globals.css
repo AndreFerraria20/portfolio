@@ -37,9 +37,34 @@ body {
 
 
 @layer components {
-  .cardShadow{
+  .flapLeft {
+    content: " ";
+    width: 1.5rem;
+    background-color: black;
+    position: absolute;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    top: 100%;
+  }
+
+  .flapRight {
+    content: " ";
+    width: 1.5rem;
+    background-color: black;
+    position: absolute;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    top: 100%;
+
+    right: 0;
+  }
+
+  .divider {
+    background-image: linear-gradient(90deg, var(--primary) 1.46%, var(--primary) 40.83%, var(--primary)65.57%, var(--primary) 107.92%)
+  }
+
+  .cardShadow {
     box-shadow: 5px 5px 0px 0px var(--accent);
   }
+
   .title {
     @apply text-[8vw] font-normal text-left hover:italic transform hover:translate-x-2 transition-transform duration-500
   }
