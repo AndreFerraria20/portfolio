@@ -2,6 +2,7 @@ import MainLayout from "../layouts/mainLayout";
 import SplitLayout from "../layouts/splitLayout";
 
 import Image from "next/image";
+import ButtonGo from "../ui/buttonGo";
 
 
 export default function Contact() {
@@ -26,7 +27,7 @@ export default function Contact() {
                 Feel free to customize this template to better fit your personality, style, and specific services.
                 Highlight your unique strengths and experiences to make your "About Me" page stand out.
             </h1>
-
+          <ButtonGo buttonText="My CV"></ButtonGo>
         </div>
 
     </div>);

@@ -1,4 +1,5 @@
 import MainLayout from "../layouts/mainLayout";
+import Footer from "../ui/footer";
 import Stack from "../ui/stack";
 import StarBackground from "../ui/startBackground";
 
@@ -45,6 +46,7 @@ export default function Skills() {
 
 
       </div>
+      <Footer/>
     </>);
 
   return (
