@@ -5,6 +5,7 @@
 :root {
   --primary: #252422;
   --secundary: #FBFEF9;
+  --accent: #f27d00
 }
 
 @media (prefers-color-scheme: dark) {
@@ -36,7 +37,9 @@ body {
 
 
 @layer components {
-
+  .cardShadow{
+    box-shadow: 5px 5px 0px 0px var(--accent);
+  }
   .title {
     @apply text-[8vw] font-normal text-left hover:italic transform hover:translate-x-2 transition-transform duration-500
   }
