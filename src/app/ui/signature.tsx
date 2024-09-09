@@ -3,15 +3,16 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 interface SignatureProps {
     color?: string;
+    widht?:number
 }
 
-const Signature: React.FC<SignatureProps> = ({ color }) => {
+const Signature: React.FC<SignatureProps> = ({ color,widht }) => {
 
 
 
     const ref = useRef(null);
     const isVisible = useInView(ref);
-    let stroke=2;
+    let stroke=widht?widht:2;
 
     const draw = {
         hidden: {
