@@ -27,10 +27,11 @@ const Card: React.FC<CardProps> = ({ i, title, description, progress, range, tar
 
     return (
 
-        <div ref={container} className='flex h-[100vh] items-center justify-center sticky top-0 '>
+        <motion.div ref={container}  style={{scale:scale, top:`calc(-5vh + ${i * 20}px)`}} className='flex h-[100vh] items-center justify-center sticky  '>
             <motion.div
-                className=" bg-secundary flex flex-col w-[80vw] h-[70vh] -top-[10%] pt-10 rounded-sm cardShadow" 
-                style={{ scale, top: `calc( ${i * 33}px)` }}>
+                className=" bg-secundary flex flex-col w-[80vw] h-[70vh]  pt-5 rounded-sm cardShadow" 
+    
+              >
                 <div ><h1 className='text-primary [font-size:3cqw]  '>{title}</h1></div>
                 <div className="flex grow  text-primary bg-secundary ">
                     <div  >
@@ -38,7 +39,7 @@ const Card: React.FC<CardProps> = ({ i, title, description, progress, range, tar
                     </div>
                 </div>
             </motion.div>
-        </div>
+        </motion.div>
 
     )
 }
