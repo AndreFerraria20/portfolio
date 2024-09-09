@@ -7,9 +7,9 @@ import { ReactTyped } from "react-typed";
 export default function Home() {
   const div1Content = (
     <div>
-      <div className="font-bold text-xl">
-      I am 
-      <ReactTyped  className=" italic" strings={[" Mobile Cross-Platform "," WebDeveloper"," Frontend"," WordPress Developer"]} typeSpeed={40} backSpeed={30} backDelay={1500} loop />
+      <div className="font-bold text-xl inline">
+      I am &thinsp;
+      <ReactTyped  className=" italic  " strings={[" Mobile Cross-Platform "," WebDeveloper"," Frontend"," WordPress Developer"]} typeSpeed={40} backSpeed={30} backDelay={1500} loop />
       </div>
       <p>A passionate developer always learning etc Attention to detail. Fuga quibusdam quasi rem beatae! Similique, quidem expedita fugit aliquam unde nostrum iure, fugiat atque praesentium quae facere quis illum hic temporibus!</p>
     </div>

@@ -32,7 +32,7 @@ const Card: React.FC<CardProps> = ({ i, title, description, progress, range, tar
                 className=" bg-secundary flex flex-col w-[80vw] h-[70vh]  pt-5 rounded-sm cardShadow" 
     
               >
-                <div ><h1 className='text-primary [font-size:3cqw]  '>{title}</h1></div>
+                <div className='cardTitle w-full' ><h1 className='text-primary [font-size:3cqw]   '>{title}</h1></div>
                 <div className="flex grow  text-primary bg-secundary ">
                     <div  >
                         <p className='px-10 text-justify'>{description}</p>

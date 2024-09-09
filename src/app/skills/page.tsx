@@ -13,9 +13,9 @@ export default function Skills() {
 
 
 
-        <div className="flex-1 grow-0 basis-1/2 h-full flex-row  text-secundary  text-3xl sticky top-1/2"><span >I am a <div className=" inline-block pr-4">
+        <div className="flex-1 grow-0 basis-1/2 h-full flex-row  text-secundary  text-3xl sticky top-1/2"><span >I am a <div className="subTitle inline-block pr-4">
           <h1>Wordpress</h1>
-        </div>developer!</span></div>
+        </div> developer!</span></div>
  
         <div className="flex grow-0 basis-1/2 flex-col   items-stretch text-secundary ">
           <div className=" justify-center h-[100vh]  flex flex-col "> <span> I am passionate about building excellent
