@@ -39,7 +39,7 @@ const SideBar: React.FC<SideBarProps> = ({ color, sideways, bgColor }) => {
           <div
             className={
               "flex grow items-center justify-center   " +
-              (sideways ? "transform -rotate-90 w-52 translate-x-2" : "-translate-y-1")
+              (sideways ? "transform -rotate-90 w-52 translate-x-2" : " pl-4 pb-2")
             }
           >
             {/* Applying motion.div to the Signature directly */}

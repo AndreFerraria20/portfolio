@@ -52,8 +52,8 @@ const Timeline: React.FC<TimeLineProps> = ({ items, title }) => {
 
     return (
         <>
-            <h1 className="text-secundary-500">{title}</h1>
-            <ul className={`${gridClass} text-secundary-500 grid w-[50rem] gap-x-5`}>
+            <h1 >{title}</h1>
+            <ul className={`${gridClass}  grid w-[50rem] gap-x-5`}>
                 {items.map((item, index) => {
                     let itemClass;
                     let content;
