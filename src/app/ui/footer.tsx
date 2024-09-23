@@ -9,9 +9,9 @@ import Link from 'next/link'
 
 export default function Footer() {
     return (
-        <div className='absolute -m-20 flex h-[100vh] w-full '>
-            <div className='grow  flex items-center justify-center  shadow-inner-lg bg-primary    '>
-                <motion.div whileHover={{scale:1.3}} className='h-40 w-40  text-center text-2xl text-secundary  font-extrabold '> <Image src={cv} alt={''}></Image> CURRICULUM </motion.div>
+        <div className='absolute lg:-m-20  flex flex-col md:flex-row  h-[100vh]  w-screen z-50 '>
+            <div className='grow   flex items-center justify-center  shadow-inner-lg bg-primary    '>
+                <motion.div whileHover={{scale:1.3}} className='h-40 w-40  text-center text-2xl text-secundary  font-extrabold '> <Link  href="/curriculum.pdf" target="_blank" rel="noopener noreferrer"><Image src={cv} alt={''}></Image> CURRICULUM </Link></motion.div>
             </div>
 
             <div className='grow  flex items-center justify-center bg-secundary'>

@@ -6,9 +6,8 @@ import RotatingMenu from "../ui/rotatingMenu";
 
 export default function Projects() {
   const content = (
-    <div>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores sapiente, aperiam repudiandae assumenda alias, recusandae temporibus molestiae exercitationem aliquid, voluptatum voluptatibus soluta. Rerum consequuntur corporis error accusantium iste a ipsa!
-      <RotatingMenu/>
+    <div className="text-white text-4xl  text-center italic">
+      Here's some of my projects that I have worked on:      <RotatingMenu/>
     </div>);
 
   return (

@@ -6,14 +6,16 @@ interface TitleProps {
     href: string;
     subtitle?: string;
     classes?: string;
+    underMaintenance?:boolean;
 }
 
-const Title: React.FC<TitleProps> = ({ title, subtitle, href, classes }) => {
+const Title: React.FC<TitleProps> = ({ title, subtitle, href, classes, underMaintenance}) => {
+    
     return (
-        <div  className={`flex flex-col flex-1 ${classes}`}>
-            <Link href={href} className="title  leading-none font-gambetta uppercase ">{title}</Link>
+        <div  className={`font-miloner    flex grow flex-col  ${classes?classes:""}`}>
+            <Link href={href} className="title  leading-none font-miloner uppercase ">{title}</Link>
 
-            {subtitle && <span className="subtitle text-primary-500  leading-none" > - {subtitle}</span>}
+            {subtitle && <span className={"subtitle text-primary-500  leading-none "+(underMaintenance?"text-red-600":" text-secundary")} > - {subtitle +(underMaintenance?" (under maintenance)":"")}</span>}
         </div>
     );
 };

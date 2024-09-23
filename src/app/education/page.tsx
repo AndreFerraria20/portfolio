@@ -6,18 +6,14 @@ import Timeline from '../ui/timeline'
 
 export default function Education() {
   const items = [
-    { date: "2002", title: 'Item 1', description: "ipsis lorumipsis lorumipsis lorumipsis lorumipsis " },
-    { date: "2002", title: 'Item 2', description: "ipsis lorumipsis lorumipsis lorumipsis lorumipsis lorum" },
-    { date: "2002", title: 'Item 3', description: "ipsis lorumipsis lorumipsis lorumipsis lorum" },
-    { date: "2002", title: 'Item 4', description: "ipsis lorumipsis lorumipsis lorumipsis lorum" },
-    { date: "2002", title: 'Item 4', description: "ipsis lorumipsis lorumipsis lorumipsis lorum" },
-    { date: "2002", title: 'Item 4', description: "ipsis lorumipsis lorumipsis lorumipsis lorum" },
-
+    { date: "2014 – 2018", title: 'IT Equipment Management and Maintenance Technician ', description: "Installing, configuring, and maintaining computer hardware, software, and networks. Includes troubleshooting and coding." },
+    { date: "2018 - 2022", title: 'Computer science degree', description: "Software development, planning and configuration of networks and services, security, mobile computing, administration and intelligent data analysis, among other skills." },
+    { date: "01/01/2023 – 31/03/2023", title: 'Research Grant for Optimizing the Picking Process in a Warehouse', description: "Developing agents that navigate the warehouse while avoiding collisions through advanced pathfinding algorithms and code optimization techniques." },
   ];
-  const content = (<><div>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores sapiente, aperiam repudiandae assumenda alias, recusandae temporibus molestiae exercitationem aliquid, voluptatum voluptatibus soluta. Rerum consequuntur corporis error accusantium iste a ipsa!
+  const content = (<><div className="md:text-4xl text-2xl  text-center italic">
+    My education path with my formal education, certificates and readings:
   </div>
-    <div className="pt-20 flex grow justify-center items-center">
+    <div className="pt-20 flex grow justify-center items-center w-[90vw]">
       <Timeline items={items} title={""} />
     </div >
 

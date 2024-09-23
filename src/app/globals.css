@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --primary: #252422;
+  --primary: #1b1b1a;
   --secundary: #FBFEF9;
   --accent: #f27d00
 }
@@ -18,7 +18,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sequel-sans);
 }
 
 @layer utilities {
@@ -66,12 +66,11 @@ body {
   }
 
   .title {
-    @apply text-[8vw] font-normal text-left hover:italic transform hover:translate-x-2 transition-transform duration-500
+    @apply text-[14vw] lg:text-[8vw] font-normal text-left hover:italic hover:translate-x-2 active:translate-x-2 transition-transform duration-500 cursor-pointer
   }
 
   .cardTitle h1 {
     text-align: center;
-      font-weight: 300;
     color: #222;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -83,26 +82,17 @@ body {
     align-items: center;
   }
 
-  .cardTitle h1:after,
-  .cardTitle h1:before {
-    content: " ";
-    display: block;
-    border-bottom: 1px solid var(--accent);
-    border-top: 1px solid  var(--accent);
-    height: 5px;
-    background-color: #f8f8f8;
-  }
+
 
   .subTitle {
     position: relative;
   }
 
   .subTitle h1 {
-    font-size: 26px;
-    font-weight: 700;
+
     letter-spacing: 1px;
     text-transform: uppercase;
-    width: 160px;
+
     text-align: center;
     margin: auto;
     white-space: nowrap;
@@ -113,9 +103,10 @@ body {
     background-color: var(--accent);
     content: '';
     display: block;
+    position: absolute;
+
     height: 3px;
-    width: 75px;
-    margin-bottom: 5px;
+    width: 90px;
   }
 
   .subTitle h1:after {
@@ -124,10 +115,9 @@ body {
     display: block;
     position: absolute;
     right: 0;
-    bottom: 0;
     height: 3px;
-    width: 75px;
-    margin-bottom: 0.25em;
+    width: 90px;
+
   }
 
 

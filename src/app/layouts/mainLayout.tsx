@@ -1,8 +1,12 @@
+"use client"
 import React, { ReactNode } from 'react';
 import Banner from "../ui/banner";
 import SideBar from '../ui/sidebar';
 import Link from 'next/link';
 import StarBackground from '../ui/startBackground';
+import { motion } from 'framer-motion';
+import { tr } from 'framer-motion/m';
+import { useMediaQuery } from '../hooks/useMediaQuery';
 
 
 
@@ -13,20 +17,43 @@ interface MainLayoutProps {
 }
 
 const MainLayout: React.FC<MainLayoutProps> = ({ title, divContent, darkBg }) => {
-    let color=darkBg?"white":"black";
+    const mediaQuery = useMediaQuery("(min-width: 850px)"); // Matches the custom breakpoint
+    let sidewayBar;
+    let color = darkBg ? "white" : "black";
+    let bg;
+
+    if(mediaQuery){
+        sidewayBar=true
+        bg="transparent"
+    }else{
+        sidewayBar=false
+        bg=darkBg?"primary":"secundary"
+    }   
+
+
+    const slideDownVariants = {
+        hidden: { y: -1000, opacity: 1 },
+        visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
+        exit: { y: 100, opacity: 0, transition: { duration: 0.5 } },
+    };
+
+
     return (
-        
-        <div > 
+
+        <div >
             {darkBg && <StarBackground />}
-            <SideBar color={color} />
-     
+            <SideBar sideways={sidewayBar} color={color} bgColor={bg} />
 
-            <div className="flex grow flex-col h-screen  ml-20 mr-20  ">
 
-                <div>
+            <div className="flex grow flex-col h-screen  lg:ml-20 lg:mr-20  ">
+
+                <motion.div initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                    variants={slideDownVariants}>
                     <Banner content={title}></Banner>
-                </div>
-                <div >
+                </motion.div>
+                <div className='min-h-screen' >
                     {divContent}
                 </div>
             </div>
