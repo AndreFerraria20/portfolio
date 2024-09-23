@@ -4,9 +4,9 @@ import ButtonGo from "../ui/buttonGo";
 
 export default function Contact() {
   const content = (
-    <div className="px-4 lg:px-10">
+    <div className="px-10 lg:px-10">
 
-      <h4 className="text-base md:text-lg text-theme-secundary font-bold text-center">
+      <h4 className="text-base md:text-lg text-secundary font-bold text-center">
         Hey! I'm André Ferraria, I've been close to computers since younger, and been passionate about it since..
       </h4>
 
