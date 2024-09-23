@@ -36,10 +36,12 @@ const SplitLayout: React.FC<SplitLayoutProps> = ({ div1Content, div2Content, div
   // Function to handle resize and re-trigger animation
   useEffect(() => {
     const handleResize = () => {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
+      if (typeof window !== 'undefined') {
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      }
       if (ref.current) {
         setHeight(ref.current.clientHeight); // Set the height based on the resized window
       }
@@ -75,7 +77,7 @@ const SplitLayout: React.FC<SplitLayoutProps> = ({ div1Content, div2Content, div
         variants={slideUpVariants}
         key={windowSize.width} // Key forces re-render on window resize
       ></motion.div>
-      
+
       {/* Left Side Content */}
       <div className="lg:w-[38.5%] grow-0 shrink-0 lg:pl-10 lg:pr-32 flex-col bg-primary sticky lg:h-screen">
         <div className="flex lg:h-[61.5%] lg:items-end justify-center -translate-x-4 lg:translate-x-0 pt-4 md:pt-0">
