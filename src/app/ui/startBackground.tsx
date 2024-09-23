@@ -85,10 +85,10 @@ const StarBackground: React.FC = () => {
           key={index}
           className="absolute top-0 left-0 w-full h-full"
           style={{
-            y: useTransform(scrollYProgress, [0, document.body.clientHeight], [0, height]),
+            y: scrollYProgress,
           }}
         >
-          {starPositions[index].map((pos, idx) => (
+          {starPositions[index].map((pos, idx)  => (
             <div
               key={idx}
               className="absolute bg-white rounded-full "

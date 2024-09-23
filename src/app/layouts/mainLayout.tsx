@@ -2,10 +2,10 @@
 import React, { ReactNode } from 'react';
 import Banner from "../ui/banner";
 import SideBar from '../ui/sidebar';
-import Link from 'next/link';
+
 import StarBackground from '../ui/startBackground';
 import { motion } from 'framer-motion';
-import { tr } from 'framer-motion/m';
+
 import { useMediaQuery } from '../hooks/useMediaQuery';
 
 

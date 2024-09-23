@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useMediaQuery } from '../hooks/useMediaQuery';
 import { motion } from 'framer-motion';
 import Divider from './divider';
@@ -31,17 +31,20 @@ const Timeline: React.FC<TimeLineProps> = ({ items, title }) => {
 
     useEffect(() => {
         const observer = new IntersectionObserver(handleScroll, {
-            threshold: 0.1, 
+            threshold: 0.1,
         });
 
-        const elements = document.querySelectorAll('[data-index]');
-        elements.forEach((el) => observer.observe(el));
+        if (typeof window !== 'undefined') {
+            const elements = document.querySelectorAll('[data-index]');
+            elements.forEach((el) => observer.observe(el));
 
-        return () => {
-            elements.forEach((el) => observer.unobserve(el));
-        };
-    }, [inViewItems]); 
-    const gridClass = mediaQuery?"grid-cols-[1fr_0.25rem_1fr]":"grid-cols-[1fr_0.25rem]";
+            return () => {
+                elements.forEach((el) => observer.unobserve(el));
+            };
+        }
+    }, [inViewItems]);
+
+    const gridClass = mediaQuery ? "grid-cols-[1fr_0.25rem_1fr]" : "grid-cols-[1fr_0.25rem]";
     const animationVariants = {
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
@@ -50,7 +53,7 @@ const Timeline: React.FC<TimeLineProps> = ({ items, title }) => {
     return (
         <>
             <h1 className="text-secundary-500">{title}</h1>
-            <ul className={`${gridClass} text-secundary-500 grid w-[50rem] gap-x-5 `}>
+            <ul className={`${gridClass} text-secundary-500 grid w-[50rem] gap-x-5`}>
                 {items.map((item, index) => {
                     let itemClass;
                     let content;
@@ -72,8 +75,7 @@ const Timeline: React.FC<TimeLineProps> = ({ items, title }) => {
                     return (
                         <React.Fragment key={index}>
                             {left && <div className='relative bg-gray-300 w-1 row-span-1 flex grow col-start-2 col-span-1 justify-center'>
-                                <div className='absolute w-8 h-8 border-8 border-primary rounded-full bg-secundary '>
-                                </div>
+                                <div className='absolute w-8 h-8 border-8 border-primary rounded-full bg-secundary '></div>
                             </div>}
                             <motion.li
                                 className={`col-span-1 ${itemClass} flex flex-col`}

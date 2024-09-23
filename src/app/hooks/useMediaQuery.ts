@@ -1,16 +1,21 @@
-// hooks/useMediaQuery.ts
 import { useEffect, useMemo, useState } from "react";
 
 export function useMediaQuery(query: string) {
-  const mediaQuery = useMemo(() => window.matchMedia(query), [query]);
-  const [match, setMatch] = useState(mediaQuery.matches);
+  const [match, setMatch] = useState<boolean>(false);
 
   useEffect(() => {
-    const onChange = () => setMatch(mediaQuery.matches);
-    mediaQuery.addEventListener("change", onChange);
+    if (typeof window !== "undefined") {
+      const mediaQuery = window.matchMedia(query);
+      const onChange = () => setMatch(mediaQuery.matches);
 
-    return () => mediaQuery.removeEventListener("change", onChange);
-  }, [mediaQuery]);
+      // Set initial match value
+      setMatch(mediaQuery.matches);
+      mediaQuery.addEventListener("change", onChange);
+
+      // Cleanup function to remove event listener
+      return () => mediaQuery.removeEventListener("change", onChange);
+    }
+  }, [query]);
 
   return match;
 }

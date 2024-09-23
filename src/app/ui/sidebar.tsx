@@ -48,7 +48,7 @@ const SideBar: React.FC<SideBarProps> = ({ color, sideways, bgColor }) => {
           </div>
         </Link>
 
-        {/* Navigation Links Section */}
+   
         <li
           className={
             "flex justify-center items-stretch " +
@@ -57,15 +57,15 @@ const SideBar: React.FC<SideBarProps> = ({ color, sideways, bgColor }) => {
               : " grow justify-evenly items-end w-3/5")
           }
         >
-          {<li className={sideways ? "transform -rotate-90 py-2 text-center" : ""}>
+          {<div className={sideways ? "transform -rotate-90 py-2 text-center" : ""}>
             <Link href={"/education"}>Education</Link>
-          </li>}
-          {<li className={sideways ? "transform -rotate-90 py-2 text-center" : ""}>
+          </div>}
+          {<div className={sideways ? "transform -rotate-90 py-2 text-center" : ""}>
             <Link href={"/projects"}>Projects</Link>
-          </li>}
-          <li className={sideways ? "transform -rotate-90 py-2 text-center" : ""}>
+          </div>}
+          <div className={sideways ? "transform -rotate-90 py-2 text-center" : ""}>
             <Link href={"/contact"}>Contact</Link>
-          </li>
+          </div>
         </li>
       </ul>
     </nav>
