@@ -1,8 +1,8 @@
 "use client"
 import React from 'react'
 import Image from 'next/image'
-import cv from "D:/Portfolio/portfolio/public/cv.svg"
-import phone from "D:/Portfolio/portfolio/public/phone.svg"
+import cv from "../../../public/cv.svg"
+import phone from "../../../public/phone.svg"
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
