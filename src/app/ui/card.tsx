@@ -40,7 +40,7 @@ const Card: React.FC<CardProps> = ({ i, title, descriptionPages, progress, range
             className="flex h-[100vh] items-center justify-center sticky"
         >
             <motion.div
-                className="bg-secundary flex flex-col w-[80vw] md:w-[500px] lg:h-[50vh] h-[35vh] pt-5 rounded-sm cardShadow overflow-hidden"
+                className="bg-secundary flex flex-col w-[80vw] md:w-[500px]  h-[80vh] md-[50vh] pt-5 rounded-sm cardShadow overflow-hidden"
             >
                 <div className='flex   flex-col w-full items-center px-4 text-center'>
                     <h1 className="text-primary text-fit text-nowrap  ">{title}</h1>
