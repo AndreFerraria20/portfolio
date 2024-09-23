@@ -24,7 +24,7 @@ const starLayers = [
 ];
 
 const StarBackground: React.FC = () => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll();
   const [height, setHeight] = useState<number>(0);
   const [direction, setDirection] = useState<number>(-1);
