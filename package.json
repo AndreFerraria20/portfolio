@@ -14,12 +14,13 @@
     "react": "^18",
     "react-dom": "^18",
     "react-typed": "^2.0.12",
-    "seedrandom": "^3.0.8"
+    "@types/seedrandom": "^3.0.8"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/seedrandom": "^3.0.8",
     "@xpd/tailwind-3dtransforms": "^1.0.3",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
